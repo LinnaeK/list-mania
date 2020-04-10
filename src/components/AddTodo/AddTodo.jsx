@@ -9,6 +9,9 @@ class AddTodo extends Component {
   }
 
   handleChange = e => {
+    if(e.target.name === 'done'){
+      e.target.value = !this.state.formData.done
+    } 
     this.setState({
       formData: {...this.state.formData, [e.target.name]:e.target.value}
     })
@@ -35,7 +38,7 @@ class AddTodo extends Component {
           value={this.state.formData.done}
           onChange={this.handleChange}
         />
-        <input type='submit' value='Add To Do' />
+        <input type='submit' value='Add To Do' className='btn'/>
       </form>
     )
   }

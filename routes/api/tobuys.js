@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var tobuysCtrl = require('../../controllers/api/tobuys');
 
-/* GET /api/tobuys */
 router.get('/', tobuysCtrl.index);
 router.get('/:id', tobuysCtrl.show);
 router.post('/', tobuysCtrl.create);
